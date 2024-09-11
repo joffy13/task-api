@@ -21,6 +21,10 @@ services:
       - db
     environment:
       DATABASE_URL: postgres://postgres:postgres@db:5432/postgres
+      JWT_SECRET_KEY: some_key
+      JWT_EXPIRE: 10h
+      APP_URL: http://localhost:8000
+      APP_PORT: 8000
     volumes:
       - .:/usr/src/app
       - /usr/src/app/node_modules
